@@ -178,7 +178,7 @@ in
         };
 
         extraPackages = mkOption {
-          type = types.listOf types.package;
+          type = types.listOf (types.either types.path types.str);
           description = ''
             Extra packages to add to `PATH` of the service to make them available to workflows.
           '';
